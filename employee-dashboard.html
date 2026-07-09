@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Employee Portal</h1>
+        </div>
+        <div class="header-right">
+          <div class="user-badge">
+            <span id="userName">User</span>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="welcome-section">
+          <h2>Submit IT Support Ticket</h2>
+          <form id="ticketForm" class="ticket-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Issue Type</label>
+                <select id="issueType" required>
+                  <option>Network</option>
+                  <option>Hardware</option>
+                  <option>Software</option>
+                  <option>Printer</option>
+                  <option>Email</option>
+                  <option>VPN</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Priority</label>
+                <select id="priority" required>
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option>High</option>
+                  <option>Critical</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Subject</label>
+              <input
+                id="subject"
+                type="text"
+                placeholder="Brief description of the issue"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea
+                id="description"
+                placeholder="Detailed explanation of the issue"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Ticket</button>
+            <div id="submitMessage" class="submit-message" style="display: none;"></div>
+          </form>
+        </div>
+
+        <div class="tickets-section">
+          <h2>My Tickets</h2>
+          <table id="ticketsTable" class="tickets-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Subject</th>
+                <th>Type</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="ticketsBody">
+              <tr>
+                <td colspan="6" style="text-align: center; color: #999;">
+                  No tickets submitted yet
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="employee-dashboard.js"></script>
+  </body>
+</html>

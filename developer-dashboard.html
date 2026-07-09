@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Developer Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <div class="user-badge">
+            <span>Developer</span>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-number" id="totalEmployees">0</div>
+            <div class="stat-label">Registered Employees</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="totalITStaff">2</div>
+            <div class="stat-label">IT Support Staff</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="totalTickets">0</div>
+            <div class="stat-label">Total Tickets</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="activeTickets">0</div>
+            <div class="stat-label">Active Tickets</div>
+          </div>
+        </div>
+
+        <div class="admin-section">
+          <h2>System Administration</h2>
+          
+          <div class="admin-grid">
+            <div class="admin-card">
+              <h3>All Employees</h3>
+              <table id="employeesTable" class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Employee #</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Registered</th>
+                  </tr>
+                </thead>
+                <tbody id="employeeBody">
+                  <tr>
+                    <td colspan="5" style="text-align: center; color: #999;">
+                      No employees registered
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="admin-card">
+              <h3>All Tickets</h3>
+              <button class="export-btn" onclick="exportData()">📥 Export CSV</button>
+              <table id="allTicketsTable" class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Employee</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody id="ticketBody">
+                  <tr>
+                    <td colspan="5" style="text-align: center; color: #999;">
+                      No tickets submitted
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="developer-dashboard.js"></script>
+  </body>
+</html>

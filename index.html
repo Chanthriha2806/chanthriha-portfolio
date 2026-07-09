@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Desk - Role Selection</title>
+    <link rel="stylesheet" href="portal-styles.css" />
+  </head>
+  <body>
+    <div class="role-container">
+      <div class="role-header">
+        <h1>Help Desk System</h1>
+        <p class="subtitle">Select Your Role</p>
+      </div>
+
+      <div class="role-grid">
+        <!-- Employee Portal -->
+        <div class="role-card employee-card">
+          <div class="role-icon">👤</div>
+          <h2>Employee</h2>
+          <p class="role-desc">Submit IT support tickets and get help</p>
+          <div class="role-features">
+            <span>✓ Submit tickets</span>
+            <span>✓ Track requests</span>
+            <span>✓ Chat support</span>
+          </div>
+          <button class="role-btn" onclick="goTo('employee-login.html')">
+            Employee Login
+          </button>
+          <p class="new-user">
+            New here? 
+            <a href="employee-signup.html">Create Account</a>
+          </p>
+        </div>
+
+        <!-- IT Support Portal -->
+        <div class="role-card support-card">
+          <div class="role-icon">🔧</div>
+          <h2>IT Support</h2>
+          <p class="role-desc">Manage and resolve employee tickets</p>
+          <div class="role-features">
+            <span>✓ View all tickets</span>
+            <span>✓ Assign issues</span>
+            <span>✓ Update status</span>
+          </div>
+          <button class="role-btn" onclick="goTo('itsupport-login.html')">
+            IT Staff Login
+          </button>
+        </div>
+
+      </div>
+
+      <div class="role-footer">
+        <p>🔒 Secure Multi-Portal System</p>
+      </div>
+
+      <div class="gradient-blob blob-1"></div>
+      <div class="gradient-blob blob-2"></div>
+    </div>
+
+    <script>
+      function goTo(page) {
+        window.location.href = page;
+      }
+    </script>
+  </body>
+</html>

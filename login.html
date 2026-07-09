@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Desk - Login</title>
+    <link rel="stylesheet" href="login-styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <h1>AI IT Help Desk</h1>
+          <p class="subtitle">Support Portal</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input
+              id="username"
+              type="text"
+              placeholder="Enter your username"
+              required
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+
+          <div class="form-group remember">
+            <label>
+              <input type="checkbox" id="rememberMe" />
+              Remember me
+            </label>
+          </div>
+
+          <button type="submit" class="login-btn">Sign In</button>
+
+          <div id="loginError" class="error-message" style="display: none;"></div>
+        </form>
+
+        <div class="login-footer">
+          <p>Demo Credentials:</p>
+          <p class="demo-cred">
+            <strong>Username:</strong> admin<br />
+            <strong>Password:</strong> helpdesk123
+          </p>
+          <p class="demo-note">Or use any username with password 'user123'</p>
+        </div>
+      </div>
+
+      <div class="login-background">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
